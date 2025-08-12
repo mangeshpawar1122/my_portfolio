@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - IT Company</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+        }
+
+        .about-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-header h2 {
+            font-size: 36px;
+            color: #2c3e50;
+        }
+
+        .about-header p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .about-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .about-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .about-box h3 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .about-box p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-header h2 {
+                font-size: 28px;
+            }
+
+            .about-header p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow px-3 py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-laptop-code me-2"></i> IT Company
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="it_company.html"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="about.html"><i class="fas fa-users me-1"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html"><i class="fas fa-cogs me-1"></i>Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-briefcase me-1"></i>Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-lg-3 my-2 my-lg-0">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                </form>
+                <a href="#" class="btn btn-success btn-sm ms-lg-2">
+                    <i class="fas fa-phone-alt me-1"></i> Get Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="about-header">
+            <h2>About Our IT Company</h2>
+            <p>Innovating digital solutions to empower your business.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-box">
+                <div class="about-icon"><i class="fas fa-eye"></i></div>
+                <h3>Our Vision</h3>
+                <p>To become a global leader in digital innovation and technology solutions.</p>
+            </div>
+            <div class="about-box">
+                <div class="about-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Our Mission</h3>
+                <p>Deliver high-quality and scalable IT solutions tailored to our clients’ needs.</p>
+            </div>
+            <div class="about-box">
+                <div class="about-icon"><i class="fas fa-users"></i></div>
+                <h3>Our Team</h3>
+                <p>A passionate and skilled team of developers, designers, and strategists.</p>
+            </div>
+            <div class="about-box">
+                <div class="about-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Our Services</h3>
+                <p>We offer software development, mobile apps, cloud solutions, and more.</p>
+            </div>
+            <div class="about-box">
+                <div class="about-icon"><i class="fas fa-headset"></i></div>
+                <h3>24/7 Support</h3>
+                <p>We are here for you anytime with dedicated technical and customer support.</p>
+            </div>
+            <div class="about-box">
+                <div class="about-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Growth & Future</h3>
+                <p>Focused on constant innovation to help businesses grow in the digital world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
