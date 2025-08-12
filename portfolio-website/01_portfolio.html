@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+        }
+
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-item a:hover {
+            background-color: #575757;
+            border-bottom: 1px solid #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+        }
+
+        .profile {
+            text-align: center;
+            margin: 1px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            float: left;
+
+        }
+
+
+        .profile-image {
+            width: 150px;
+            height: 170px;
+            border-radius: 10px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .profile-details {
+            text-align: center;
+            margin: 1px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            height: 200px;
+            justify-content: center;
+
+        }
+
+        .profile-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+            text-align: center;
+            justify-content: center;
+        
+
+        }
+
+        .profile-role {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 10px;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+
+        .profile-description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .about-me {
+
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1px 0;
+        }
+
+        .about-profile {
+            padding: 20px;
+            font-size: large;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .about-profile h2 {
+
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #4CAF50;
+        }
+
+        .about-profile p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .profile-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile-text {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .list-div1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            float: left;
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .list-div2 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            float: right;
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .profile-details1,
+        .profile-details2 {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-detail {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .profile-detail strong {
+            color: #333;
+        }
+
+        .profile-specialization {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        .services {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 1px 0;
+
+        }
+
+        .services-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .services-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-item {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .skills {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 1px 0;
+        }
+
+        .skills-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .skills-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-item {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #00796b;
+        }
+
+        .resume-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 1px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .section-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .resume-download {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .resume-download:hover {
+            background-color: #45a049;
+        }
+
+        .portfolio {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 1px 0;
+        }
+
+        .portfolio h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .portfolio p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .portfolio ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .portfolio li {
+            margin-bottom: 10px;
+        }
+
+        .portfolio a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .portfolio a:hover {
+            text-decoration: underline;
+            color: #45a049;
+        }
+
+        .contact {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 1px 0;
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .contact p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-text {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .footer-text a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-text a:not(:last-child)::after {
+            content: ', ';
+        }
+
+        .footer-text a:last-child::after {
+            content: '';
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile,
+            .profile-details {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .list-div1,
+            .list-div2 {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .list-div1 ul,
+            .list-div2 ul {
+                width: 100%;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 140px;
+            }
+
+            .profile-name {
+                font-size: 20px;
+            }
+
+            .profile-role {
+                font-size: 16px;
+            }
+
+            .profile-description,
+            .about-profile p,
+            .services-description,
+            .skills-description,
+            .section-description {
+                font-size: 14px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 140px;
+            }
+
+            .profile-name {
+                font-size: 20px;
+            }
+
+            .profile-role {
+                font-size: 16px;
+            }
+
+            .profile-description,
+            .about-profile p,
+            .services-description,
+            .skills-description,
+            .section-description {
+                font-size: 14px;
+            }
+
+            .services-item,
+            .skills-item {
+                font-size: 14px;
+            }
+
+            .resume-download {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .portfolio h2,
+            .contact h2,
+            .about-profile h2,
+            .services h2,
+            .skills h2,
+            .section h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile,
+            .profile-details {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .list-div1,
+            .list-div2 {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .list-div1 ul,
+            .list-div2 ul {
+                width: 100%;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 120px;
+            }
+
+            .profile-name {
+                font-size: 18px;
+            }
+
+            .profile-role {
+                font-size: 14px;
+            }
+
+            .profile-description,
+            .about-profile p,
+            .services-description,
+            .skills-description,
+            .section-description {
+                font-size: 14px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .services-item,
+            .skills-item {
+                font-size: 14px;
+            }
+
+            .resume-download {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+
+            .portfolio h2,
+            .contact h2,
+            .about-profile h2,
+            .services h2,
+            .skills h2,
+            .section h2 {
+                font-size: 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="01_portfolio.html">Home</a></li>
+            <li class="nav-item"><a href="02_about.html">About</a></li>
+            <li class="nav-item"><a href="04_services.html">Services</a></li>
+         
+            <li class="nav-item"><a href="03_contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div>
+        <header class="header">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my work and projects</p>
+        </header>
+        <div class="container">
+            <div class="profile">
+                <img src="my photo.jpg" alt="Mangesh Pawar" class="profile-image">
+            </div>
+            <div class="profile-details">
+                <h2 class="profile-name">Mangesh Pawar</h2>
+                <p class="profile-role">Web Developer & Backend Developer</p>
+                <p class="profile-description">I am a skilled web developer with expertise in both front-end and
+                    back-end technologies. I love creating dynamic and responsive websites.</p>
+
+            </div>
+        </div>
+        <section class="about-me">
+            <div class="about-profile">
+                <h2>About Me</h2>
+                <p>I am a passionate developer with experience in various technologies. I
+                    love creating innovative solutions
+                    and continuously learning new skills.</p>
+                <div>
+                    <h1 class="profile-title">Web Developer & Backend Developer</h1>
+                    <p class="profile-text">
+                        Mangesh Pawar is a skilled web developer with expertise in both front-end and back-end
+                        technologies. With a passion for creating dynamic and responsive websites, Mangesh has
+                        worked on
+                        various projects that showcase his ability to deliver high-quality code and user-friendly
+                        interfaces.
+                    </p>
+                    <div class="list-div1">
+                        <ul class="profile-details1">
+                            <li class="profile-detail"><strong>Birth Date:</strong> January 1, 1990</li>
+                            <li class="profile-detail"><strong>Address:</strong> 123 Main Street, City, Country</li>
+                            <li class="profile-detail"><strong>Email:</strong> mangesh.pawar@example.com</li>
+                            <li class="profile-detail"><strong>Phone:</strong> (123) 456-7890</li>
+                        </ul>
+                    </div>
+                    <div class="list-div2">
+                        <ul>
+                            <li class="profile-detail"><strong>Website:</strong>
+                                <a href="https://www.example.com">www.example.com</a>
+                            </li>
+                            <li class="profile-detail"><strong>Age:</strong> 33</li>
+                            <li class="profile-detail"><strong>Degree:</strong> Bachelor of Science in Computer Science
+                            </li>
+                            <li class="profile-detail"><strong>Freelance:</strong> Available</li>
+                        </ul>
+                    </div>
+                    <p class="profile-specialization">I specialize in building responsive and user-friendly websites
+                        and applications.
+                        I have a strong background in both front-end and back-end development, allowing me to create
+                        seamless user experiences.
+                        My expertise includes HTML, CSS, JavaScript, and various backend technologies.
+                        I am committed to delivering high-quality code and ensuring that my projects meet the needs of
+                        my clients and users.
+                    </p>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section class="services">
+        <h2 class="services-title">Services</h2>
+        <p class="services-description">I offer a range of services to help businesses succeed online:</p>
+        <ul class="services-list">
+            <li class="services-item">Web Development</li>
+            <li class="services-item">Backend Development</li>
+            <li class="services-item">API Development</li>
+            <li class="services-item">Database Management</li>
+        </ul>
+        <div class="skills">
+            <h2 class="skills-title">My Skills</h2>
+            <p class="skills-description">Here are some of the skills I possess:</p>
+            <ul class="skills-list">
+                <li class="skills-item">HTML</li>
+                <li class="skills-item">CSS</li>
+                <li class="skills-item">JavaScript</li>
+                <li class="skills-item">React</li>
+                <li class="skills-item">Node.js</li>
+                <li class="skills-item">Python</li>
+                <li class="skills-item">SQL</li>
+                <li class="skills-item">Git</li>
+            </ul>
+        </div>
+    </section>
+    <section class="resume-container">
+        <h2 class="section-title">Resume</h2>
+        <p class="section-description">Download my resume:</p>
+        <a href="resume.pdf" class="resume-download">Download Resume</a>
+    </section>
+    <section class="portfolio">
+        <h2 class="section-title">Blog</h2>
+        <p class="section-description">Check out my latest blog posts:</p>
+        <ul>
+            <li><a href="blog_post_1.html">Understanding Web Development</a></li>
+            <li><a href="blog_post_2.html">Backend Development Best Practices</a></li>
+            <li><a href="blog_post_3.html">Building Responsive Websites</a></li>
+        </ul>
+    </section>
+    <section class="contact">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-description">If you would like to get in touch, please fill out the contact form on my
+            <a href="03_contact.html">Contact</a> page.
+        </p>
+    </section>
+    <footer class="footer">
+        <p class="footer-text">&copy; 2023 Mangesh Pawar. All rights reserved.</p>
+        <p class="footer-text">Follow me on:
+            <a href="https://www.linkedin.com/in/mangesh-pawar">LinkedIn</a>,
+            <a href="https://github.com/mangesh-pawar">GitHub</a>,
+            <a href="https://twitter.com/mangesh_pawar">Twitter</a>
+        </p>
+    </footer>
+    </div>
+    <script>
+        // JavaScript for interactivity can be added here
+        console.log("Portfolio page loaded successfully.");
+    </script>
+
+</body>
+
+</html>
